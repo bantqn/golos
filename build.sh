@@ -5,6 +5,7 @@
 #   ./build.sh          — собрать голос.app в dist/
 #   ./build.sh run      — собрать и запустить
 #   ./build.sh install  — собрать и положить в /Applications
+#   ./build.sh dmg      — собрать установочный образ для GitHub Release
 #   ./build.sh test     — собрать движки и прогнать регрессионные тесты
 #   ./build.sh clean    — удалить артефакты сборки
 #
@@ -19,6 +20,8 @@ cd "$ROOT"
 APP_NAME="голос"
 EXECUTABLE_NAME="Golos"
 BUNDLE="dist/${APP_NAME}.app"
+APP_VERSION="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' Resources/Info.plist)"
+DMG="dist/golos-${APP_VERSION}-macos-arm64.dmg"
 LEGACY_BUNDLE="dist/Golos.app"
 LEGACY_RUSSIAN_BUNDLE="dist/Голос.app"
 WHISPER="Vendor/whisper.cpp"
@@ -198,5 +201,24 @@ case "${1:-}" in
         rm -rf "/Applications/${APP_NAME}.app"
         cp -R "$BUNDLE" /Applications/
         say "Установлено: /Applications/${APP_NAME}.app"
+        ;;
+    dmg)
+        command -v hdiutil >/dev/null || die "Не найден hdiutil"
+        say "Собираю установочный образ"
+        DMG_ROOT="dist/dmg-root"
+        rm -rf "$DMG_ROOT" "$DMG" "${DMG}.sha256"
+        mkdir -p "$DMG_ROOT"
+        ditto "$BUNDLE" "${DMG_ROOT}/${APP_NAME}.app"
+        ln -s /Applications "${DMG_ROOT}/Программы"
+        cp Resources/INSTALL.txt "${DMG_ROOT}/как установить.txt"
+        hdiutil create \
+            -volname "${APP_NAME} ${APP_VERSION}" \
+            -srcfolder "$DMG_ROOT" \
+            -format UDZO \
+            -ov \
+            "$DMG" >/dev/null
+        rm -rf "$DMG_ROOT"
+        shasum -a 256 "$DMG" > "${DMG}.sha256"
+        say "Готово: ${DMG} ($(du -h "$DMG" | cut -f1))"
         ;;
 esac
