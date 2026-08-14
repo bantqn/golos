@@ -13,7 +13,7 @@
 - Компактная прозрачная плашка без прямоугольного ореола.
 - Управление моделями и контроль памяти для долгой работы.
 
-![Как работает голос](docs/assets/overview.svg)
+![Как работает голос](https://raw.githubusercontent.com/bantqn/golos/main/docs/assets/overview.svg)
 
 ## Системные требования
 
@@ -26,4 +26,4 @@
 
 Исходный релиз можно собирать локально уже сейчас. Публичный бинарный архив
 появится после выбора лицензии, подписи Apple Developer ID и notarization.
-Команды проверки находятся в [docs/TESTING.md](docs/TESTING.md).
+Команды проверки находятся в [docs/TESTING.md](https://github.com/bantqn/golos/blob/main/docs/TESTING.md).
