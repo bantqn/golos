@@ -1,0 +1,11 @@
+.DS_Store
+.claude/
+.codex/
+.agents/
+.swiftpm/
+.build/
+dist/
+Vendor/whisper.cpp/build-static/
+Sources/CWhisper/include/
+*.xcresult
+*.log

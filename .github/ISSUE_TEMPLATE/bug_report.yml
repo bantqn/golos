@@ -1,0 +1,28 @@
+name: Ошибка
+description: Сообщить о воспроизводимой проблеме
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: Что произошло
+      description: Опишите фактический и ожидаемый результат.
+    validations: { required: true }
+  - type: textarea
+    attributes:
+      label: Как воспроизвести
+      description: Перечислите минимальные шаги.
+    validations: { required: true }
+  - type: input
+    attributes:
+      label: macOS и модель Mac
+    validations: { required: true }
+  - type: dropdown
+    attributes:
+      label: Тема
+      options: [Тёмная, Светлая, Как в системе]
+    validations: { required: true }
+  - type: textarea
+    attributes:
+      label: Дополнительные материалы
+      description: Скриншоты и обезличенные строки журнала. Не прикладывайте записи и ключи.

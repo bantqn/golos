@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>голос</string>
+    <key>CFBundleDisplayName</key>
+    <string>голос</string>
+    <key>CFBundleExecutable</key>
+    <string>Golos</string>
+    <key>CFBundleIdentifier</key>
+    <string>ai.cybergusli.golos</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSHumanReadableCopyright</key>
+    <string>Локальное распознавание речи. Данные не покидают этот компьютер.</string>
+
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Микрофон нужен, чтобы записывать вашу речь на встречах и распознавать диктовку. Звук обрабатывается локально и никуда не отправляется.</string>
+    <key>NSAudioCaptureUsageDescription</key>
+    <string>Захват системного звука нужен, чтобы записывать собеседников в Zoom, Телемосте, Telegram и других приложениях.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Распознавание речи выполняется локально моделью whisper внутри приложения.</string>
+
+    <key>NSSupportsAutomaticTermination</key>
+    <false/>
+    <key>NSSupportsSuddenTermination</key>
+    <false/>
+
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeName</key>
+            <string>Аудиозапись</string>
+            <key>CFBundleTypeRole</key>
+            <string>Viewer</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>public.audio</string>
+                <string>public.movie</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>

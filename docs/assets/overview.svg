@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Как работает голос</title>
+  <desc id="desc">Запись или импорт проходят локальное распознавание и превращаются в текст, архив или диктовку</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171b27"/><stop offset="1" stop-color="#090b11"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#32d8f4"/><stop offset="1" stop-color="#8e6cff"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1200" height="520" rx="34" fill="#080a0f"/>
+  <circle cx="1040" cy="-40" r="260" fill="#7760ff" opacity=".10"/><circle cx="120" cy="520" r="280" fill="#26d9ee" opacity=".08"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <text x="72" y="82" fill="#f5f7fb" font-size="38" font-weight="700">Речь остаётся на вашем Mac</text>
+    <text x="72" y="120" fill="#99a1b3" font-size="20">Запись, распознавание и архив — локально, без облака</text>
+    <g filter="url(#shadow)">
+      <rect x="72" y="174" width="288" height="246" rx="26" fill="url(#panel)" stroke="#fff" stroke-opacity=".09"/>
+      <rect x="456" y="174" width="288" height="246" rx="26" fill="url(#panel)" stroke="url(#accent)" stroke-opacity=".65"/>
+      <rect x="840" y="174" width="288" height="246" rx="26" fill="url(#panel)" stroke="#fff" stroke-opacity=".09"/>
+    </g>
+    <g fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M137 272h22l12-30 18 62 18-92 19 92 18-62 13 30h36"/>
+      <path d="M526 270h20l12-22 16 48 18-70 18 70 16-48 12 22h34"/>
+      <path d="M918 202h132v78H918zM944 302h80M968 280v22"/>
+    </g>
+    <g fill="#f5f7fb" font-size="23" font-weight="650" text-anchor="middle"><text x="216" y="357">Запишите</text><text x="600" y="357">Распознайте</text><text x="984" y="357">Используйте</text></g>
+    <g fill="#99a1b3" font-size="16" text-anchor="middle"><text x="216" y="389">встречу, голос или файл</text><text x="600" y="389">Whisper или Parakeet</text><text x="984" y="389">диктовку, Markdown, SRT</text></g>
+    <path d="M380 296h52m-13-13 13 13-13 13M764 296h52m-13-13 13 13-13 13" fill="none" stroke="#667085" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
